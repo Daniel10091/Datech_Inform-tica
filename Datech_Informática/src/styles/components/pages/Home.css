@@ -1,0 +1,302 @@
+/* ================================================================== */
+/* =============================> HOME <============================= */
+/* ================================================================== */
+
+section .home-content {
+  width: 100%;
+  height: calc(100vh - 80px);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../../../Images/background_1920x1200.jpg');
+  background-position: center;
+  background-size: cover;
+  visibility: hidden;
+  transition: all 0.4s ease-out 4s
+}
+
+section.show .home-content {
+  visibility: visible;
+}
+
+section .title-content,
+section .caption-content {
+  filter: drop-shadow(2px 2px 3px var(--dark-color-opacity-5));
+  z-index: 200;
+  opacity: 0;
+  transition: opacity 1s ease-out 1s;
+}
+
+section .title-content {
+  font-size: 12vmin;
+  background: linear-gradient(90deg, var(--color-secondary-1), var(--color-primary-1));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+section .caption-content {
+  font-size: 3.5vmin;
+  background: linear-gradient(90deg, var(--color-primary-5), var(--color-primary-7));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+section.show .title-content,
+section.show .caption-content {
+  opacity: 1;
+  animation: titleAnime 1s ease-out;
+}
+
+section.show .title-content {
+  animation-delay: 0.8s;
+}
+
+section.show .caption-content {
+  animation-delay: 1s;
+}
+
+@keyframes titleAnime {
+  0% {
+    transform: translateY(-5rem);
+  }
+}
+
+.home-btn {
+  position: relative;
+  margin-top: 4rem;
+  width: 150px;
+  height: 54px;
+  border-radius: 14px;
+  background: transparent;
+  border: 2px solid transparent;
+  filter: drop-shadow(2px 2px 6px var(--dark-color-opacity-5));
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 0.4s ease-out, opacity 1s ease-out 1.8s, transform 1s ease-out 1.8s;
+}
+
+section.show .home-btn {
+  opacity: 1;
+  transform: scale(1);
+  animation: home-btn 2s infinite ease-out 2.65s;
+}
+
+@keyframes home-bt {
+  0% {
+    transform: scale(0.5);
+  }
+}
+
+@keyframes home-btn {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(2px 2px 6px var(--dark-color-opacity-5));
+  }
+  50% {
+    transform: scale(1.14);
+    filter: drop-shadow(4px 4px 12px var(--dark-color-opacity-5));
+    animation-timing-function: ease-in;
+  }
+}
+
+.home-btn:hover {
+  transform: scale(1.1) !important;
+  filter: drop-shadow(3px 3px 10px var(--dark-color-opacity-5));
+}
+
+.home-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 5px);
+  height: calc(100% - 5px);
+  background: var(--color-secondary-2);
+  border-radius: 9px;
+}
+
+.home-btn i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.home-btn i::before,
+.home-btn i::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  background: linear-gradient(60deg, var(--color-primary-5), var(--color-primary-7));
+  transition: all 0.4s ease-out;
+}
+
+.home-btn i::before {
+  top: 0;
+  left: 0;
+}
+
+.home-btn:hover i::before,
+body.mobile .home-btn i::before {
+  width: 100%;
+  height: 100%;
+}
+
+.home-btn i::after {
+  right: 0;
+  bottom: 0;
+}
+
+.home-btn:hover i::after,
+body.mobile .home-btn i::after {
+  width: 100%;
+  height: 100%;
+}
+
+.home-btn span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  font-size: 18px;
+  color: var(--color-primary-7);
+  z-index: 10;
+  transition: all 0.4s ease-out;
+}
+
+.home-btn:hover span {
+  filter: drop-shadow(1px 1px 2px var(--dark-color-opacity-5));
+}
+
+@media only screen and (max-width: 1051px) {
+  section .title-content {
+    font-size: 11vmin;
+  }
+
+  section .caption-content {
+    font-size: 3.2vmin;
+  }
+}
+
+@media only screen and (max-width: 940px) {
+  section .title-content {
+    font-size: 9vmin;
+  }
+
+  section .caption-content {
+    font-size: 2.7vmin;
+  }
+
+  .home-btn {
+    width: 140px;
+    height: 50px;
+    border-radius: 12px;
+  }
+
+  .home-btn::before {
+    border-radius: 8px;
+  }
+
+  .home-btn span {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  section .title-content {
+    font-size: 70px;
+  }
+
+  section .caption-content {
+    font-size: 22px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  section .title-content {
+    font-size: 60px;
+  }
+
+  section .caption-content {
+    font-size: 19px;
+  }
+
+  .home-btn {
+    width: 130px;
+    height: 48px;
+  }
+
+  .home-btn span {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  section .title-content {
+    font-size: 3.2em;
+  }
+  
+  section .caption-content {
+    font-size: 1em;
+  }
+
+  .home-btn {
+    width: 120px;
+    height: 44px;
+  }
+
+  .home-btn span {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  section .title-content {
+    font-size: 44px;
+  }
+  
+  section .caption-content {
+    font-size: 14px;
+  }
+
+  .home-btn {
+    width: 120px;
+    height: 44px;
+    border-radius: 12px;
+  }
+
+  .home-btn span {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  section .title-content {
+    font-size: 38px;
+  }
+  
+  section .caption-content {
+    font-size: 12px;
+  }
+
+  .home-btn {
+    width: 100px;
+    height: 38px;
+  }
+
+  .home-btn span {
+    font-size: 12px;
+  }
+}

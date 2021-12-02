@@ -1,0 +1,235 @@
+.login {
+  position: absolute;
+  top: 78px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 78px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('../../../images/wallpapersden.com_purple-abstract-art_3840x2160.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: var(--dark-color-4);
+  z-index: 5100;
+}
+
+body.close-login .login {
+  display: none;
+}
+
+.login-content {
+  min-width: 500px;
+  display: flex;
+  flex-direction: column;
+  padding-block: 20px;
+  padding-inline: 40px;
+  background: var(--dark-color-opacity-2);
+  background: var(--dark-color-2);
+  box-shadow: 4px 4px 8px var(--dark-color-opacity-4);
+  border-radius: 12px;
+  animation: login 1s ease-out;
+}
+
+@keyframes login {
+  0% {
+    opacity: 0;
+    transform: scale(1.4);
+  }
+}
+
+.login-title h1 {
+  font-size: 2.2em;
+  color: var(--light-color-2);
+  filter: drop-shadow(2px 2px 1px var(--dark-color-opacity-5));
+  background-image: -o-linear-gradient(to right, #09f1b8, #00a2ff, #ff00d2, #fed90f);
+  background-image: var(--background-image-2);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-color: transparent;
+}
+
+.login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+#login-input {
+  position: relative;
+  width: 100%;
+}
+
+#login-input span:first-child {
+  font-size: 18px;
+  color: var(--light-color-2);
+  filter: drop-shadow(1px 1px 1px var(--dark-color-opacity-5));
+}
+
+#login-input .input {
+  position: relative;
+  margin-top: 20px;
+}
+
+#login-input .input input {
+  width: 100%;
+  height: 46px;
+  font-size: 18px;
+  color: var(--light-color-2);
+  background: var(--dark-color-2);
+  padding-inline: 8px;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  border-bottom: 2px solid var(--color-primary-8);
+  transition: all 0.2s ease-out;
+}
+
+#login-input .input input:hover {
+  border-bottom-color: var(--color-primary-12);
+}
+
+#login-input .input input:focus,
+#login-input .input input:valid {
+  border-color: var(--color-primary-12);
+}
+
+#login-input .input span {
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  font-size: 18px;
+  color: var(--light-color-2);
+  background: var(--dark-color-2);
+  pointer-events: none;
+  transition: all 0.2s ease-out;
+}
+
+#login-input .input input:focus ~ span,
+#login-input .input input:valid ~ span {
+  transform: translateY(-22px);
+  font-size: 17px;
+  color: var(--light-color-4);
+}
+
+#login-btn {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin: 2rem 0 10px 0;
+}
+
+#login-alert {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: all 0.2s ease-out;
+}
+
+#login-alert span {
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.login.alert #login-alert span {
+  opacity: 1;
+}
+
+#login-alert span ion-icon {
+  font-size: 22px;
+  color: var(--color-primary-2);
+  margin-right: 2px;
+}
+
+#login-alert span b {
+  font-size: 12px;
+  color: var(--color-primary-2);
+}
+
+#login-btn button {
+  width: 120px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: var(--light-color-2);
+  background: var(--color-primary-13);
+  border-radius: 6px;
+  border: 2px solid transparent;
+  cursor: no-drop;
+  transition: all 0.2s ease-out;
+}
+
+#login-btn button:hover {
+  background: transparent;
+  border-color: var(--color-primary-13);
+}
+
+#login-btn button ion-icon {
+  margin-left: 5px;
+  font-size: 26px;
+  color: var(--color-primary-12);
+  transition: all 0.2s ease-out;
+}
+
+#login-btn button:hover ion-icon {
+  color: var(--color-primary-10);
+}
+
+body.dark-theme #login-btn button:hover ion-icon {
+  color: var(--color-primary-13);
+}
+
+@media only screen and (max-width: 600px) {
+  .login-content {
+    min-width: 90%;
+    padding-inline: 30px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .login-content {
+    padding-inline: 20px;
+  }
+
+  #login-input span:first-child {
+    font-size: 16px;
+  }
+
+  #login-input .input span {
+    font-size: 16px;
+  }
+
+  #login-btn {
+    align-items: flex-end;
+  }
+
+  .login.alert #login-btn {
+    height: 80px;
+    margin-top: 14px;
+  }
+
+  #login-alert {
+    top: 0;
+    bottom: auto;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .login-content {
+    align-items: center;
+  }
+
+  #login-input .input input:focus ~ span,
+  #login-input .input input:valid ~ span {
+    transform: translateY(-20px);
+    font-size: 15px;
+  }
+}

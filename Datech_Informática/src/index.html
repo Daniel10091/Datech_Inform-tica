@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datech Informática</title>
+  <meta name="description" content="Datech Informática - Solções em informática com o melhor custo e garantia.">
+  <meta name="author" content="Daniel"/>
+  <meta name="theme-color" content="#171b1f">
+  <meta property="og:title" content="Datech Informática - Solções em informática com o melhor custo e garantia"/>
+  <meta property="og:description" content="Datech Informática - Solções em informática com o melhor custo e garantia."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Datech Informática"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="shortcut icon" href="images/I-removebg-preview.png" type="image/x-icon">
+  <link href="fontawesome-free-5.15.4-web/css/fontawesome.css" rel="stylesheet">
+  <link href="fontawesome-free-5.15.4-web/css/brands.css" rel="stylesheet">
+  <link href="fontawesome-free-5.15.4-web/css/solid.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+  <header class="nav-bar">
+    <div class="logo">
+      <a href="#home">
+        <div id="logo" data-aos="fade-down" data-aos-delay="200">
+          <span class="path"></span>
+          <span class="text">DT</span>
+        </div>
+        <div id="name">
+          <span data-aos="fade-left" data-aos-delay="300">Datech</span>
+          <span data-aos="fade-left" data-aos-delay="400">Informática</span>
+        </div>
+      </a>
+    </div>
+    <input type="radio" name="slider" id="navHome" class="navbar-input-home">
+    <input type="radio" name="slider" id="navServices" class="navbar-input-services">
+    <input type="radio" name="slider" id="navAbout" class="navbar-input-about">
+    <input type="radio" name="slider" id="navContact" class="navbar-input-contact">
+    <nav>
+      <ul>
+        <li>
+          <label for="navHome" class="show-home">
+            <ion-icon name="home-outline"></ion-icon>
+            <span>Início</span>
+          </label>
+        </li>
+        <li>
+          <label for="navServices" class="show-services home-btn-active">
+            <ion-icon name="grid-outline"></ion-icon>
+            <span>Serviços</span>
+          </label>
+        </li>
+        <li>
+          <label for="navAbout" class="show-about">
+            <ion-icon name="help-outline"></ion-icon>
+            <span>Sobre</span>
+          </label>
+        </li>
+        <li>
+          <label for="navContact" class="show-contact">
+            <ion-icon name="chatbox-outline"></ion-icon>
+            <span>Contato</span>
+          </label>
+        </li>
+        <div class="slider"></div>
+      </ul>
+    </nav>
+    <div class="menu-buttons">
+      <button id="theme-btn" onkeydown="keyThemeBtn(event)" data-aos="zoom-in" data-aos-delay="300">
+        <ion-icon name="moon-outline"></ion-icon>
+        <ion-icon name="sunny-outline"></ion-icon>
+      </button>
+      <button id="toggle-menu" title="Show Menu" data-aos="fade-left" data-aos-delay="300">
+        <span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="menu-mobile">
+    <div class="logo">
+      <a href="#home">
+        <div id="logo">
+          <span class="path"></span>
+          <span class="text">DT</span>
+        </div>
+        <div id="name">
+          <span>Datech</span>
+          <span>Informática</span>
+        </div>
+      </a>
+    </div>
+    <input type="radio" name="slider" id="mobHome">
+    <input type="radio" name="slider" id="mobServices">
+    <input type="radio" name="slider" id="mobAbout">
+    <input type="radio" name="slider" id="mobContact">
+    <ul id="nav">
+      <li>
+        <label for="mobHome" class="show-home">
+          <ion-icon name="home-outline" style="--i:1;"></ion-icon>
+          <span style="--i:1;">Início</span>
+        </label>
+      </li>
+      <li>
+        <label for="mobServices" class="show-services home-btn-active">
+          <ion-icon name="grid-outline" style="--i:2;"></ion-icon>
+          <span style="--i:2;">Serviços</span>
+        </label>
+      </li>
+      <li>
+        <label for="mobAbout" class="show-about">
+          <ion-icon name="help-outline" style="--i:3;"></ion-icon>
+          <span style="--i:3;">Sobre</span>
+        </label>
+      </li>
+      <li>
+        <label for="mobContact" class="show-contact">
+          <ion-icon name="chatbox-outline" style="--i:4;"></ion-icon>
+          <span style="--i:4;">Contato</span>
+        </label>
+      </li>
+      <div class="slider"></div>
+    </ul>
+    <ul id="social">
+      <li title="Telegram" style="--i:3;">
+        <a href="" onclick="telegram()">
+          <box-icon name='telegram' type='logo'></box-icon>
+        </a>
+      </li>
+      <li title="Instagram" style="--i:2;">
+        <a href="" onclick="instagram()">
+          <box-icon type='logo' name='instagram'></box-icon>
+        </a>
+      </li>
+      <li title="Facebook" style="--i:2;">
+        <a href="" onclick="facebook()">
+          <box-icon type='logo' name='facebook'></box-icon>
+        </a>
+      </li>
+      <li title="Mail" style="--i:3;">
+        <a href="" onclick="mail()">
+          <box-icon name='mail-send'></box-icon>
+        </a>
+      </li>
+    </ul>
+    
+    <span class="menu-move">
+      <box-icon name='move-horizontal'></box-icon>
+    </span>
+  </nav>
+
+  <main class="main" data-role="page" id="pageone">
+
+    <section id="home" data-section="section">
+      <div class="home-content section-content">
+        <h1 class="title-content" id="people-name"></h1>
+        <h2 class="caption-content">Bem vindo(a) a Datech Informática!</h2>
+        <button class="home-btn show-services">
+          <span>Ver serviços</span>
+          <i></i>
+        </button>
+      </div>
+    </section>
+
+    <section id="services" data-section="section">
+      <div class="services-content section-content">
+        <h1 class="services-title">Serviços</h1>
+        <div class="boxes">
+
+          <div class="box" style="--i:1;">
+            <div class="image">
+              <img src="images/Services/web-development.jpg" alt="Web Development">
+            </div>
+            <div class="box-content">
+              <div class="title">
+                <h1>Desenvolvimento Web</h1>
+              </div>
+              <div class="paragraph">
+                <p>Desenvolvimento front-end de websites responsivos com design moderno, estilos personalizados e funcionaliadades incríveis.</p>
+              </div>
+              <div class="info">
+                <ul class="list">
+                  <li id="li">
+                    <span class="title">Linguagens utilizadas:</span>
+                    <ul>
+                      <li class="html-icon">
+                        <box-icon name='html5' type='logo'></box-icon>
+                        <span>HTML</span>
+                      </li>
+                      <li class="css-icon">
+                        <box-icon name='css3' type='logo'></box-icon>
+                        <span>CSS</span>
+                      </li>
+                      <li class="javascript-icon">
+                        <box-icon name='javascript' type='logo'></box-icon>
+                        <span>JavaScript</span>
+                      </li>
+                      <li class="jquery-icon">
+                        <box-icon name='jquery' type='logo'></box-icon>
+                        <span>jQuery</span>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="button">
+                <button>Entrar em contato</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="box" style="--i:2;">
+            <div class="image">
+              <img src="./images/Services/instalation.jpg" alt="">
+            </div>
+            <div class="box-content">
+              <div class="title">
+                <h1>Formatação e Instalação</h1>
+              </div>
+              <div class="paragraph">
+                <p>Formatação (desktop/notebook) e intalação do Sistema Operacional que desejar.</p>
+              </div>
+              <div class="info">
+                <ul class="list">
+                  <li id="li">
+                    <span class="title">Sistemas Operacionais:</span>
+                    <ul>
+                      <li class="windows-icon">
+                        <i class="fab fa-windows"></i>
+                        <span>Windows 10/ Windows 8.1/ windows 7</span>
+                      </li>
+                      <li class="linux-icon">
+                        <i class="fab fa-linux"></i>
+                        <span>Linux Mint/ Ubuntu/ Kali Linux</span>
+                      </li>
+                      <li class="dual_boot-icon">
+                        <i class="far fa-window-restore"></i>
+                        <span>Dual boot (dois sistems em um mesmo computador)</span>
+                      </li>
+                      <li class="reset-icon">
+                        <box-icon name='reset'></box-icon>
+                        <span>Reintalação apenas</span>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="button">
+                  <button>Entrar em contato</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="box" style="--i:3;">
+            <div class="image">
+              <img src="./images/Services/programs.jpg" alt="">
+            </div>
+            <div class="box-content">
+              <div class="title">
+                  <h1>Instalação de programas</h1>
+              </div>
+              <div class="paragraph">
+                  <p>Instalação de programas e jogos ativados</p>
+              </div>
+              <div class="info">
+                <ul class="list">
+                  <li id="li">
+                    <span class="title">Tipos de programas:</span>
+                    <ul>
+                      <li class="office-icon">
+                        <i class="far fa-file-word"></i>
+                        <span>Pacote Office (2019/2016/2013)</span>
+                      </li>
+                      <li class="game-icon">
+                        <ion-icon name="game-controller-outline"></ion-icon>
+                        <span>Jogos</span>
+                      </li>
+                      <li class="edit-icon">
+                        <ion-icon name="create-outline"></ion-icon>
+                        <span>Edição (Foto/Vídeo/Audio)</span>
+                      </li>
+                      <li class="hidden">
+                        <box-icon></box-icon>
+                        <span>hidden</span>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="button">
+                <button>Entrar em contato</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="box" style="--i:4;">
+            <div class="image">
+              <img src="https://i.ytimg.com/vi/6pXWExRYyjc/maxresdefault.jpg" alt="">
+            </div>
+            <div class="box-content">
+              <div class="title">
+                <h1>Montagem / Upgrade</h1>
+              </div>
+              <div class="paragraph">
+                <p>Montagem e upgrade de desktop e notebook. Serviço de qualidade, com organização de cabos e mais.</p>
+              </div>
+              <div class="info">
+                <ul class="list">
+                  <li id="li">
+                    <span class="title">Mondagem e upgrade de:</span>
+                    <ul>
+                      <li class="hardware-icon">
+                        <i class="fas fa-memory"></i>
+                        <span>Hardware (HD/SSD, memória, placa de vídeo,...)</span>
+                      </li>
+                      <li class="software-icon">
+                        <box-icon name='window-alt'></box-icon>
+                        <span>Software (ex.: do Windows 7 para o 10)</span>
+                      </li>
+                      <li class="hidden">
+                        <box-icon></box-icon>
+                        <span>hidden</span>
+                      </li>
+                      <li class="hidden">
+                        <box-icon></box-icon>
+                        <span>hidden</span>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="button">
+                <button>Entrar em contato</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="box" style="--i:5;">
+            <div class="image">
+              <img src="./images/Services/maintenance.jpg" alt="">
+            </div>
+            <div class="box-content">
+              <div class="title">
+                  <h1>Manutenção</h1>
+              </div>
+              <div class="paragraph">
+                  <p>Manutenção de desktop e notebook. Serviço de qualidade com garantia.</p>
+              </div>
+              <div class="info">
+                <ul class="list">
+                  <li id="li">
+                    <span class="title">Manutenção de:</span>
+                    <ul>
+                      <li class="power-icon">
+                        <i class="fas fa-plug"></i>
+                        <span>Fonte de alimentação</span>
+                      </li>
+                      <li class="chip-icon">
+                        <box-icon name='chip' ></box-icon>
+                        <span>Placa mãe</span>
+                      </li>
+                      <li class="others-icon">
+                        <i class="fas fa-screwdriver"></i>
+                        <span>Outros (entre em contato)</span>
+                      </li>
+                      <li class="hidden">
+                        <box-icon></box-icon>
+                        <span>hidden</span>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="button">
+                <button>Entrar em contato</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="box" style="--i:6;">
+            <div class="image">
+              <img src="./images/Services/cleaning.jpg" alt="">
+            </div>
+            <div class="box-content">
+              <div class="title">
+                  <h1>Limpeza e conservação</h1>
+              </div>
+              <div class="paragraph">
+                  <p>Limpeza completa de desktop e notebook. Serviço de qualidade, deixando seu equipamento novo outra vez
+                    e previnindo futuros problemas causados pela sujeira.
+                  </p>
+              </div>
+              <div class="info">
+                <ul class="list">
+                  <li id="li">
+                    <span class="title">Limpeza inclui:</span>
+                    <ul>
+                      <li class="pen-icon">
+                        <i class="fas fa-pen-fancy"></i>
+                        <span>Limpeza completa</span>
+                      </li>
+                      <li class="thermometer-icon">
+                        <box-icon type='solid' name='thermometer'></box-icon>
+                        <span>Troca da pasta térmica</span>
+                      </li>
+                      <li class="ruler-icon">
+                        <i class="fas fa-ruler-combined"></i>
+                        <span>Organização completa</span>
+                      </li>
+                      <li class="hidden">
+                        <box-icon></box-icon>
+                        <span>hidden</span>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="button">
+                <button>Entrar em contato</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="go-to-top">
+        <a href="#services">
+          <ion-icon name="arrow-up-outline"></ion-icon>
+        </a>
+      </div>
+    </section>
+
+    <section id="about" data-section="section">
+      <div class="about-content section-content">
+        <section class="operation-day">
+          <h1>Funcionamento</h1>
+          <div class="operation-list">
+            <ul>
+              <li id="sunday" style="--i:1;">
+                <ion-icon name="calendar-outline"></ion-icon>
+                <div>
+                  <p>Domingo:<span> Não abrimos neste dia</span></p>
+                </div>
+              </li>
+              <li id="monday" style="--i:2;">
+                <ion-icon name="calendar-outline"></ion-icon>
+                <div>
+                  <p>Segunda-feira:<span> Aberto das - <b>08h</b> às <b>18h</b></span></p>
+                </div>
+              </li>
+              <li id="tuesday" style="--i:3;">
+                <ion-icon name="calendar-outline"></ion-icon>
+                <div>
+                  <p>Terça-feira:<span> Aberto das - <b>08h</b> às <b>18h</b></span></p>
+                </div>
+              </li>
+              <li id="wednesday" style="--i:4;">
+                <ion-icon name="calendar-outline"></ion-icon>
+                <div>
+                  <p>Quarta-feira:<span> Aberto das - <b>08h</b> às <b>18h</b></span></p>
+                </div>
+              </li>
+              <li id="thursday" style="--i:5;">
+                <ion-icon name="calendar-outline"></ion-icon>
+                <div>
+                  <p>Quinta-feira:<span> Aberto das - <b>08h</b> às <b>18h</b></span></p>
+                </div>
+              </li>
+              <li id="friday" style="--i:6;">
+                <ion-icon name="calendar-outline"></ion-icon>
+                <p>Sexta-feira:<span> Aberto das - <b>08h</b> às <b>18h</b></span></p>
+              </li>
+              <li id="saturday" style="--i:7;">
+                <ion-icon name="calendar-outline"></ion-icon>
+                <div>
+                  <p>Sábado:<span> Aberto das - <b>08h</b> às <b>16h</b></span></p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="datech-about">
+          <h1 class="title">Sobre a <span>Datech</span></h1>
+          <div class="datech-about-content">
+            <div class="img">
+              <img src="./images/About/Datech_Informática.PNG" alt="">
+            </div>
+            <div class="paragraph">
+              <p>A Datech está em atuação no mercado desde 2019, sempre procurando oferecer o melhor serviço de qualidade e ajudando a todos.
+                Na Datech Informática, você encontra os melhores preços e serviços de qualidade com garantia de 30 dias.
+                A empresa é composta por uma equipe de dois técnicos formados na área da tecnologia, e que buscam ofereçer o melhor atendimento.
+                Oferecemos serviços de menutenção de hardware e software e também desenvolvimento de website.</p>
+            </div>
+          </div>
+        </section>
+        <section class="datech-tecnic">
+          <h1 class="title">Sobre os <span>técnicos</span></h1>
+          <div class="datech-tecnic-content">
+            <div class="tecnic-1">
+              <div class="box box-1">
+                <div class="img">
+                  <img src="https://rochadvogados.com.br/wp-content/uploads/2019/08/solucoes-pessoas-fisicas.jpg" alt="Daniel Aguiar">
+                </div>
+                <div class="box-text">
+                  <div class="title">
+                    <h1>Daniel Aguiar</h1>
+                  </div>
+                  <div class="paragraph">
+                    <p>Formado em <span>Manutenção e Suporte em Informática e Graduando em Sistema de Informação</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tecnic-2">
+              <div class="box box-2">
+                <div class="img">
+                  <img src="https://opetroleo.com.br/wp-content/uploads/2021/08/4-razoes-para-ser-uma-pessoa-mais-curiosa-thumb-570.jpg" alt="Thalita Fernandes">
+                </div>
+                <div class="box-text">
+                  <div class="title">
+                    <h1>Thalita Fernandes</h1>
+                  </div>
+                  <div class="paragraph">
+                    <p>Formada em <span>Informática para a Internet e Graduando em Sistema de Informação</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="datech-logo-bg">
+          <span></span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" data-section="section">
+      <div class="contact-content section-content">
+        <div class="contact-block">
+          <h1>Contato</h1>
+          <div class="contact-block-content">
+            <div class="contact-info">
+              <h1>Informações</h1>
+              <div class="phone" onclick="phone()" style="--i:5;">
+                <ion-icon name="call-outline"></ion-icon>
+                <span>(61) 98653-5935</span>
+              </div>
+              <div class="mail" onclick="mail()" style="--i:6;">
+                <ion-icon name="mail-outline"></ion-icon>
+                <span>datech.informatica100@gmail.com</span>
+              </div>
+              <div class="address" onclick="map()" style="--i:7;">
+                <ion-icon name="location-outline"></ion-icon>
+                <span>Estância 1, Módulo L Casa 25B - Planaltina-DF</span>
+              </div>
+              <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d315.525796859162!2d-47.674961740771806!3d-15.613133373333577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a6d82ea4cff01%3A0xe1efc88c2be85f26!2sDATECH%20INFORM%C3%81TICA!5e1!3m2!1spt-BR!2sbr!4v1638374909642!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+              </div>
+            </div>
+            <div class="contact-form">
+              <form action="https://api.staticforms.xyz/submit" method="post" class="form" autocomplete="off">
+                <input type="hidden" name="accessKey" value="382b3312-1e96-4fc8-aed6-d9bf245dccdf">
+                <input type="hidden" name="subject" value="Test from jsfiddle">
+                <div class="contact-input name" style="--i:5;">
+                  <input type="text" name="name" required autocomplete="off">
+                  <span>Nome</span>
+                </div>
+                <div class="contact-input mail" style="--i:6;">
+                  <input type="email" name="email" id="" required autocomplete="off">
+                  <span>E-mail</span>
+                </div>
+                <div class="contact-input phone" style="--i:7;">
+                  <input type="phone" name="phone" id="" required autocomplete="off">
+                  <span>Telefone</span>
+                </div>
+                <div class="contact-textarea" style="--i:9;">
+                  <textarea name="message" id="" required autocomplete="off"></textarea>
+                  <span>Mensagem</span>
+                </div>
+                <input type="hidden" name="redirectTo" value="https://dt-4c640c.netlify.app">
+                <input type="text" name="honeypot" style="display: none;">
+                <div class="submit contact-btn">
+                  <button type="submit">
+                    <span>Enviar</span>
+                    <ion-icon name="send-outline"></ion-icon>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <footer>
+      <div class="footer-content">
+
+        <nav class="footer-nav footer-nav-link">
+          <h1>Links Rápidos</h1>
+          <ul id="footer-nav">
+            <li class="show-home">
+              <box-icon name='right-arrow-alt'></box-icon>
+              <span>Início</span>
+            </li>
+            <li class="show-services">
+              <box-icon name='right-arrow-alt'></box-icon>
+              <span>Serviços</span>
+            </li>
+            <li class="show-about">
+              <box-icon name='right-arrow-alt'></box-icon>
+              <span>Sobre</span>
+            </li>
+            <li class="show-contact">
+              <box-icon name='right-arrow-alt'></box-icon>
+              <span>Contato</span>
+            </li>
+          </ul>
+        </nav>
+        
+        <nav class="footer-nav">
+          <h1>Siga-nos</h1>
+          <ul>
+            <li id="footer-link-instagram" onclick="instagram()">
+              <i class="fab fa-instagram"></i>
+              <span>Instagram</span>
+            </li>
+            <li id="footer-link-twitter" onclick="twitter()">
+              <i class="fab fa-twitter"></i>
+              <span>Twitter</span>
+            </li>
+            <li id="footer-link-facebook" onclick="fecebook()">
+              <i class="fab fa-facebook"></i>
+              <span>Facebook</span>
+            </li>
+            <li id="footer-link-telegram" onclick="telegram()">
+              <i class="fab fa-telegram"></i>
+              <span>Telegram</span>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="footer-newsletter">
+          <h1>Newsletter</h1>
+          <span>Mantenha-se atualizado com nossos descontos</span>
+          <form action="https://api.staticforms.xyz/submit" method="POST" class="footer-newsletter-input" id="newsletterForm" autocomplete="off">
+            <input type="hidden" name="accessKey" value="382b3312-1e96-4fc8-aed6-d9bf245dccdf">
+            <input type="hidden" name="subject" value="Test from jsfiddle">
+            <input class="input" type="text" name="name" value="Newsletter"  style="display: none;">
+            <input type="email" name="email" id="" placeholder="email" autocomplete="off" required>
+            <input type="hidden" name="redirectTo" value="https://dt-4c640c.netlify.app">
+            <input type="text" name="honeypot" style="display: none;">
+            <button class="newsletter-btn sclk button is-primary" type="submit">
+              <box-icon name='chevron-right'></box-icon>
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+      <b></b>
+
+      <div class="footer-dev">
+        <p>Desenvolvido por <a href="#">Daniel</a> | ©2021 Todos os Direitos Reservados</p>
+      </div>
+    </footer>
+    
+    <div class="menu-opacity">
+      <span class="menu-move">
+        <box-icon name='move-horizontal'></box-icon>
+      </span>
+    </div>
+
+    
+  </main>
+  <div class="login"></div>
+
+  <div class="loading">
+    <span></span>
+  </div>
+  
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="./script/components/Icons/ionicons.js"></script>
+  <script type="text/javascript" src="./script/components/Icons/boxicons.js"></script>
+  <script type="text/javascript" src="./script/components/jquery.min.js"></script>
+  <script type="text/javascript" src="./script/components/jquery-3.6.0.js"></script>
+  <script type="text/javascript" src="./script/components/Jquery3.4.1.min.js"></script>
+  <script type="text/javascript" src="./script/components/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="./script/components/jquery.mobile-1.4.5.min.js"></script>
+  <script type="text/javascript" src="./script/components/owl-carousel/owl.carousel.min.js"></script>
+  <script type="text/javascript" src="./script/Aos.js"></script>
+  <script type="text/javascript" src="./script/components/Theme/Theme.js"></script>
+  <script type="text/javascript" src="./script/Form/Form.js"></script>
+  <script type="text/javascript" src="./script/Script.js"></script>
+  <script type="text/javascript" src="./script/Login/Login.js"></script>
+  <script type="text/javascript" src="./script/Links.js"></script>
+  <script type="text/javascript" src="./script/Pages/About.js"></script>
+  <script type="text/javascript" src="./script/Pages/Contact.js"></script>
+  <script type="text/javascript" src="./script/Main.js"></script>
+  <script type="text/javascript" src="./script/Mobile.js"></script>
+</body>
+</html>

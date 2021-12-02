@@ -1,0 +1,761 @@
+/* ================================================================== */
+/* =============================> ABOUT <============================= */
+/* ================================================================== */
+
+.about-content {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 4rem;
+}
+
+.about-content .datech-logo-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 500px;
+  height: 500px;
+  transform: translate(50px, -50px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.1;
+}
+
+.about-content .datech-logo-bg::before {
+  content: 'DT';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-20deg);
+  font-size: 17pc;
+  font-weight: 600;
+  background: linear-gradient(60deg, var(--color-primary-5), var(--color-primary-7));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-color: transparent;
+  -webkit-text-stroke-width: calc(1em / 20);
+  filter: drop-shadow(1px 1px 1px var(--dark-color-opacity-5));
+}
+
+.about-content .datech-logo-bg span {
+  width: 500px;
+  height: 500px;
+  border: 18px solid var(--color-secondary-2);
+  transform : rotate(25deg);
+}
+
+.about-content .datech-logo-bg span::before,
+.about-content .datech-logo-bg span::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500px;
+  height: 500px;
+  border: 18px solid var(--color-secondary-2);
+}
+
+.about-content .datech-logo-bg span::before {
+  transform: translate(-50px, -50px);
+}
+
+.about-content .datech-logo-bg span::after {
+  transform: translate(14px, 14px);
+}
+
+/* ================================== OPERATION-DAY ============================= */
+
+.operation-day {
+  width: 80%;
+}
+
+.operation-day h1 {
+  font-size: 5vmin;
+  color: var(--light-color-2);
+  filter: drop-shadow(2px 2px 1px var(--dark-color-opacity-5));
+  opacity: 0;
+  transform: translate3d(-50px, 0, 0);
+  transition: all 1s ease-out;
+}
+
+#about.show .operation-day h1 {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.operation-day ul {
+  position: relative;
+  min-width: 400px;
+  max-width: 600px;
+  margin-top: 2rem;
+  padding: 1rem 10px 1rem 2rem;
+}
+
+.operation-day ul li {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+  padding-inline: 5px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  cursor: default;
+  opacity: 0;
+  transform: translate3d(0, -50px, 0);
+  transition: all 0.2s ease-out;
+}
+
+#about.show .operation-day ul li {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition: transform 1s ease-out calc(var(--i) * 0.2s), opacity 1s ease-out calc(var(--i) * 0.2s);
+}
+
+.operation-day ul li.today {
+  background: var(--light-color-opacity-1);
+  border-color: var(--light-color-opacity-2);
+}
+
+.operation-day ul li.today::before {
+  content: '';
+  position: absolute;
+  padding: 5px;
+  border-radius: 50%;
+  background: var(--color-primary-7);
+  filter: drop-shadow(2px 2px 1px var(--dark-color-opacity-5));
+  transform: translate3d(-25px, 0, 0);
+}
+
+.operation-day ul li:hover,
+.operation-day ul li.today:hover {
+  background: var(--light-color-opacity-2);
+}
+
+.operation-day ul li ion-icon {
+  font-size: 22px;
+  color: var(--light-color-3);
+  margin: 0 10px;
+  filter: drop-shadow(1px 1px 1px var(--dark-color-opacity-5));
+  transition: all 0.3s ease-out;
+}
+
+.operation-day ul li:hover ion-icon {
+  transform: scale(1.2);
+  filter: drop-shadow(2px 2px 1px var(--dark-color-opacity-5));
+}
+
+.operation-day ul li.today ion-icon {
+  color: var(--color-primary-4);
+  transform: scale(1.26);
+  filter: drop-shadow(2px 2px 1px var(--dark-color-opacity-5));
+}
+
+.operation-day ul li.today:hover ion-icon {
+  transform: scale(1.26);
+}
+
+.operation-day ul li p {
+  font-size: 16px;
+  color: var(--light-color-3);
+}
+
+.operation-day ul li.today p {
+  font-size: 20px;
+  color: var(--color-primary-11);
+}
+
+.operation-day ul li p span {
+  font-family: var(--font-family-2);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--color-blue-4);
+}
+
+.operation-day ul li p span b {
+  font-size: 16px;
+  color: var(--color-primary-4);
+}
+
+.operation-day ul li.today p span b {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-primary-4);
+}
+
+/* ================================== DATECH-ABOUT ============================= */
+
+.datech-about {
+  width: 80%;
+  margin-top: 8rem;
+}
+
+.datech-about h1 {
+  font-size: 5vmin;
+  color: var(--light-color-2);
+  filter: drop-shadow(2px 2px 1px var(--dark-color-opacity-5));
+  opacity: 0;
+  transform: translate3d(-50px, 0, 0);
+  transition: all 0.4s ease-out, opacity 1s ease-out 2s, transform 1s ease-out 2s;
+}
+
+#about.show .datech-about h1 {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.datech-about h1 span {
+  font-size: 5.2vmin;
+  color: var(--color-secondary-1);
+  -webkit-text-stroke-width: calc(0.6em / 30);
+}
+
+.datech-about-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  padding: 3rem 2rem;
+}
+
+.datech-about-content .img {
+  position: relative;
+  min-width: 400px;
+  width: 600px;
+  min-height: 400px;
+  height: 500px;
+  margin-right: 10%;
+  box-shadow: 5px 5px 15px var(--dark-color-opacity-3);
+  border-radius: 10px;
+  overflow: hidden;
+  opacity: 0;
+  transform: translate3d(0, 50px, 0);
+  transition: all 1s ease-out 2.6s;
+}
+
+#about.show .datech-about-content .img {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.datech-about-content .img::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-45deg, var(--color-primary-5), var(--color-primary-7));
+  z-index: -1;
+}
+
+.datech-about-content .img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
+  object-fit: cover;
+  border-radius: 8px;
+  transition: all 0.6s ease-out;
+}
+
+.datech-about-content .img:hover img {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.datech-about-content .paragraph {
+  position: relative;
+  max-width: 600px;
+  height: 100%;
+  opacity: 0;
+  transform: translate3d(50px, 0, 0);
+  transition: all 1s ease-out 2.6s;
+}
+
+#about.show .datech-about-content .paragraph {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.datech-about-content .paragraph p {
+  font-size: 18px;
+  text-align: justify;
+  word-break: keep-all;
+  line-height: 2rem;
+  letter-spacing: 1px;
+  color: var(--light-color-2);
+}
+
+/* ================================== DATECH-TECNIC ============================= */
+
+.datech-tecnic {
+  width: 80%;
+  margin-top: 8rem;
+}
+
+.datech-tecnic > h1 {
+  font-size: 5vmin;
+  color: var(--light-color-2);
+  filter: drop-shadow(2px 2px 1px var(--dark-color-opacity-5));
+  opacity: 0;
+  transform: translate3d(-50px, 0, 0);
+  transition: all 0.4s ease-out, opacity 1s ease-out 3s, transform 1s ease-out 3s;
+}
+
+#about.show .datech-tecnic > h1 {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.datech-tecnic > h1 span {
+  font-size: 5.2vmin;
+  color: var(--color-secondary-1);
+  -webkit-text-stroke-width: calc(0.6em / 30);
+}
+
+.datech-tecnic-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin-block: 2rem;
+  padding: 3rem 2rem;
+}
+
+.datech-tecnic-content .box {
+  position: relative;
+  width: 440px;
+  height: 500px;
+  border: 4px solid var(--color-secondary-1);
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px var(--dark-color-opacity-3);
+  overflow: hidden;
+  opacity: 0;
+  transform: translate3d(0, 50px, 0);
+}
+
+#about.show .datech-tecnic-content .box {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+#about.show .datech-tecnic-content .box-1 {
+  transition-delay: 3.5s;
+}
+
+#about.show .datech-tecnic-content .box-2 {
+  transition-delay: 4s;
+}
+
+.datech-tecnic-content .box .img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.datech-tecnic-content .box .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.datech-tecnic-content .box .box-text {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background: var(--dark-color-opacity-7);
+  /* backdrop-filter: blur(12px); */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+body.dark-theme .datech-tecnic-content .box .box-text {
+  background: var(--light-color-opacity-7);
+}
+
+body.computer .datech-tecnic-content .box .box-text {
+  transform: translateY(100%);
+  transition: all 0.4s ease-out;
+}
+
+body.computer .datech-tecnic-content .box:hover .box-text {
+  transform: translateY(0);
+}
+
+.datech-tecnic-content .box .box-text .title h1 {
+  font-size: 3vmin;
+  color: var(--color-primary-10);
+  filter: drop-shadow(2px 2px 1px var(--dark-color-opacity-5));
+}
+
+body.dark-theme .datech-tecnic-content .box .box-text .title h1 {
+  color: var(--color-primary-4);
+}
+
+.datech-tecnic-content .box .box-text .paragraph {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.datech-tecnic-content .box .box-text .paragraph p,
+.datech-tecnic-content .box .box-text .paragraph p span {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--light-color-2);
+}
+
+@media only screen and (max-width: 1600px) {
+  .datech-about-content .img {
+    margin-right: 5%;
+  }
+}
+
+@media only screen and (max-width: 1550px) {
+  .datech-about-content .img {
+    height: 400px;
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  .datech-about-content {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .datech-about-content .img {
+    width: 70%;
+    height: 550px;
+    margin-right: 0;
+    transform: translate3d(-50px, 0, 0);
+  }
+  
+  .datech-about-content .paragraph {
+    max-width: 80%;
+    margin-top: 3rem;
+  }
+  
+  .datech-tecnic-content {
+    margin-block: 0;
+  }
+  
+  .datech-tecnic-content .box {
+    margin: 2rem;
+    width: 350px;
+    height: 450px;
+  }
+
+  .datech-tecnic-content .box .box-text .paragraph {
+    margin-top: 1rem;
+  }
+
+  .datech-tecnic-content .box .box-text .paragraph p,
+  .datech-tecnic-content .box .box-text .paragraph p span {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .datech-about-content .img {
+    height: 500px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .about-content .datech-logo-bg {
+    width: 400px;
+    height: 400px;
+    opacity: 0.08;
+  }
+
+  .about-content .datech-logo-bg::before {
+    font-size: 13pc;
+  }
+  
+  .about-content .datech-logo-bg span {
+    width: 400px;
+    height: 400px;
+    border-width: 16px;
+  }
+  
+  .about-content .datech-logo-bg span::before,
+  .about-content .datech-logo-bg span::after {
+    width: 400px;
+    height: 400px;
+    border-width: 16px;
+  }
+  
+  .about-content .datech-logo-bg span::before {
+    transform: translate(-45px, -45px);
+  }
+  
+  .about-content .datech-logo-bg span::after {
+    transform: translate(12px, 12px);
+  }
+
+  .datech-about-content .img {
+    width: 80%;
+  }
+  
+  .datech-about-content .paragraph {
+    max-width: 90%;
+  }
+
+  .datech-tecnic-content {
+    padding: 3rem 1rem;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .datech-about-content .img {
+    height: 450px;
+  }
+  
+  .datech-about-content .paragraph {
+    max-width: 95%;
+  }
+
+  .datech-tecnic-content {
+    padding: 3rem 0rem;
+  }
+  
+  .datech-tecnic-content .box {
+    width: 280px;
+    height: 380px;
+  }
+
+  .datech-tecnic-content .box .box-text .title h1 {
+    font-size: 2.5vmin;
+  }
+
+  .datech-tecnic-content .box .box-text .paragraph p,
+  .datech-tecnic-content .box .box-text .paragraph p span {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .about-content .datech-logo-bg {
+    width: 300px;
+    height: 300px;
+    opacity: 0.08;
+  }
+
+  .about-content .datech-logo-bg::before {
+    font-size: 9.8pc;
+  }
+  
+  .about-content .datech-logo-bg span {
+    width: 300px;
+    height: 300px;
+    border-width: 12px;
+  }
+  
+  .about-content .datech-logo-bg span::before,
+  .about-content .datech-logo-bg span::after {
+    width: 300px;
+    height: 300px;
+    border-width: 12px;
+  }
+  
+  .about-content .datech-logo-bg span::before {
+    transform: translate(-34px, -34px);
+  }
+  
+  .about-content .datech-logo-bg span::after {
+    transform: translate(10px, 10px);
+  }
+
+  .datech-about-content .img {
+    width: 90%;
+    min-height: 300px;
+    height: 400px;
+  }
+
+  .datech-tecnic-content {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .datech-tecnic-content .box {
+    width: 400px;
+    height: 500px;
+    margin: 2rem 0;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .operation-day ul {
+    max-width: 500px;
+  }
+  
+  .operation-day ul li.today p {
+    font-size: 18px;
+  }
+  
+  .operation-day ul li.today p span b {
+    font-size: 16px;
+  }
+
+  .datech-about {
+    margin-top: 5rem;
+  }
+  
+  .datech-about-content .img {
+    width: 95%;
+    height: 360px;
+  }
+  
+  .datech-about-content .paragraph {
+    max-width: 100%;
+  }
+  
+  .datech-about-content .paragraph p {
+    font-size: 16px;
+  }
+
+  .datech-tecnic {
+    margin-top: 5rem;
+  }
+  
+  .datech-tecnic-content .box {
+    width: 350px;
+    height: 450px;
+  }
+
+  .datech-tecnic-content .box .box-text .title h1 {
+    font-size: 3.5vmin;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .operation-day {
+    width: 90%;
+  }
+
+  .operation-day ul li ion-icon {
+    font-size: 20px;
+  }
+  
+  body.computer .operation-day ul li:hover ion-icon {
+    transform: scale(1.1);
+  }
+  
+  .operation-day ul li.today ion-icon {
+    color: var(--color-primary-4);
+    transform: scale(1.16);
+  }
+  
+  body.computer .operation-day ul li.today:hover ion-icon {
+    transform: scale(1.16);
+  }
+
+  .operation-day ul li p {
+    font-size: 2.6vmin;
+  }
+
+  .operation-day ul li.today p {
+    font-size: 2.7vmin;
+  }
+
+  .operation-day ul li p span {
+    font-size: 2.7vmin;
+  }
+
+  .operation-day ul li p span b {
+    font-size: 2.5vmin;
+  }
+  
+  .operation-day ul li.today p span b {
+    font-size: 2.4vmin;
+  }
+  
+  .datech-about {
+    width: 90%;
+  }
+  
+  .datech-about-content .img {
+    min-width: 100%;
+    height: 300px;
+  }
+  
+  .datech-about-content .paragraph p {
+    font-size: 3vmin;
+  }
+
+  .datech-tecnic {
+    width: 90%;
+  }
+
+  .datech-tecnic-content .box .box-text {
+    height: 160px;
+  }
+
+  .datech-tecnic-content .box .box-text .title h1 {
+    font-size: 4vmin;
+  }
+
+  .datech-tecnic-content .box .box-text .paragraph {
+    margin-top: 1rem;
+  }
+  
+  .datech-tecnic-content .box .box-text .paragraph p,
+  .datech-tecnic-content .box .box-text .paragraph p span {
+    font-size: 2.6vmin;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  .datech-about-content {
+    padding: 3rem 0rem;
+  }
+  
+  .datech-tecnic-content .box {
+    width: 300px;
+    height: 400px;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .operation-day ul {
+    min-width: 100%;
+    padding-left: 1rem;
+  }
+
+  .operation-day ul li {
+    height: 36px;
+    padding-inline: 0;
+  }
+  
+  .operation-day ul li.today::before {
+    padding: 4px;
+    transform: translate3d(-16px, 0, 0);
+  }
+  
+  .datech-about-content .img {
+    min-height: 200px;
+    height: 260px;
+  }
+  
+  .datech-tecnic-content .box {
+    width: 250px;
+    height: 340px;
+  }
+
+  .datech-tecnic-content .box .box-text .title h1 {
+    margin-top: 1rem;
+  }
+}

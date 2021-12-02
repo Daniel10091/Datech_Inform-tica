@@ -1,0 +1,76 @@
+/* ==================================================================== */
+/* =============================> PRELOADER <============================= */
+/* ==================================================================== */
+
+.preloader-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-blue-3);
+  z-index: 100000000;
+}
+/* 
+.preloader-section span {
+  width: 65px;
+  height: 65px;
+  border: 8px solid var(--color-secondary-2);
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  animation: loader 0.8s linear infinite;
+} */
+/* 
+@keyframes loader {
+  0% {
+    transform: rotate(-360deg);
+  }
+} */
+
+.preloader-section span {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  margin: 0 6px;
+  border: 6px solid var(--light-color-3);
+  border-radius: 50%;
+  box-shadow: 4px 4px 8px var(--dark-color-opacity-2),
+              -4px -4px 8px var(--light-color-opacity-4),
+              inset 2px 2px 4px var(--dark-color-opacity-2),
+              inset -2px -2px 4px var(--light-color-opacity-4);
+}
+
+.preloader-section span::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  width: 100%;
+  height: 100%;
+  background: var(--color-blue-4);
+  border-radius: inherit;
+  box-shadow: inset 2px 2px 4px var(--dark-color-opacity-2),
+              inset -2px -2px 4px var(--light-color-opacity-4);
+  animation: loaderAnimate 3.5s linear infinite, loaderColor 5s linear infinite;
+  animation-delay: calc(var(--i) * 0.2s);
+}
+
+@keyframes loaderAnimate {
+  0%, 9.99%, 70.0001% {
+    transform: scale(0);
+  } 10%, 70% {
+    transform: scale(1);
+  }
+}
+
+@keyframes loaderColor {
+  0% {
+    filter: hue-rotate(0);
+  } 100% {
+    filter: hue-rotate(360deg);
+  }
+}

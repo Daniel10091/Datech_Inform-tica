@@ -1,0 +1,113 @@
+:root {
+  --light-color-1: #ffffff;
+  --light-color-2: #f0f0f0;
+  --light-color-3: #d8e2eb;
+  --light-color-4: #6e767a;
+  --light-color-5: #6a6a75;
+  --light-color-6: #9998;
+  --light-color-7: #9995;
+  --light-color-8: #6668;
+  --light-color-9: #6665;
+  --light-color-10: #2a343d;
+  
+  --light-color-opacity-1: rgba(255, 255, 255, 0.1);
+  --light-color-opacity-2: rgba(255, 255, 255, 0.2);
+  --light-color-opacity-3: rgba(255, 255, 255, 0.3);
+  --light-color-opacity-4: rgba(255, 255, 255, 0.4);
+  --light-color-opacity-5: rgba(255, 255, 255, 0.5);
+  --light-color-opacity-6: rgba(255, 255, 255, 0.6);
+  --light-color-opacity-7: rgba(255, 255, 255, 0.7);
+  --light-color-opacity-8: rgba(255, 255, 255, 0.8);
+
+  --color-blue-1: #17a2b8;
+  --color-blue-2: #96deff;
+  --color-blue-3: #45b0e6;
+  --color-blue-4: #0199ff;
+  --color-blue-5: #0084ff;
+  --color-blue-6: #007acc;
+  --color-blue-7: #0b55e8;
+  --color-blue-8: #0199ffa0;
+  --color-blue-9: #007acc3d;
+  --color-blue-10: #007acc14;
+  
+  --color-pink-1: #ffddff;
+  --color-pink-2: #eae;
+  --color-pink-3: #ee87ee;
+  --color-pink-4: #ff5eff;
+  --color-pink-5: #ff00ff;
+  --color-pink-6: #d31ad3;
+  --color-pink-7: #bd1abd;
+  --color-pink-8: #a100a1;
+  --color-pink-9: #ff00ffad;
+  --color-pink-10: #ff00ff67;
+
+  --color-primary-1: #fa1e4e;
+  --color-primary-2: #e01b46;
+  --color-primary-3: #c7183e;
+  --color-primary-4: #ec0076;
+  --color-primary-5: #d800ca;
+  --color-primary-6: #1183b8;
+  --color-primary-7: #fdd81d;
+  --color-primary-8: #0097fc;
+  --color-primary-9: #0096db;
+  --color-primary-10: #09f1b8;
+  --color-primary-11: #0b8b0b;
+  --color-primary-12: #ff00d2;
+  --color-primary-13: #00a2ff;
+
+  --color-secondary-1: #704ac7;
+  --color-secondary-2: #4717b8;
+  --color-secondary-3: #B07DFB;
+  --color-secondary-4: #8844ee;
+  
+  --color-orange-1: #ff776c;
+  --color-orange-2: #f54a4b;
+  --color-orange-3: #f03030;
+  --color-orange-4: #ff0000;
+  --color-orange-5: #c40f0f;
+  --color-orange-6: #ff0000ad;
+
+  --dark-color-1: #000000;
+  --dark-color-2: #121314;
+  --dark-color-3: #101214;
+  --dark-color-4: #171b1f;
+  --dark-color-5: #222325;
+  
+  --dark-color-opacity-1: rgba(0, 0, 0, 0.1);
+  --dark-color-opacity-2: rgba(0, 0, 0, 0.2);
+  --dark-color-opacity-3: rgba(0, 0, 0, 0.3);
+  --dark-color-opacity-4: rgba(0, 0, 0, 0.4);
+  --dark-color-opacity-5: rgba(0, 0, 0, 0.5);
+  --dark-color-opacity-6: rgba(0, 0, 0, 0.6);
+  --dark-color-opacity-7: rgba(0, 0, 0, 0.7);
+  --dark-color-opacity-8: rgba(0, 0, 0, 0.8);
+  --dark-color-opacity-9: rgba(0, 0, 0, 0.9);
+
+  
+  --background-image-1: url('../images/2019_Purple_Abstract_4K_HD_Design_1920x1200.jpg');
+  --background-image-2: linear-gradient(to right, #09f1b8, #00a2ff, #ff00d2, #fed90f);
+}
+
+body.dark-theme {
+  --light-color-2: #222325;
+  --light-color-3: #171b1f;
+
+  /* --color-primary-1: #ff00ff;
+  --color-primary-2: #ff00ff;
+  --color-primary-3: #bd1abd;
+
+  --color-secondary-1: #0084ff;
+  --color-secondary-2: #0199ffa0; */
+
+  --dark-color-2: #ffffff;
+  --dark-color-3: #d8e2eb;
+  --dark-color-4: #f1f8ff;
+  
+  --light-color-opacity-1: rgba(0, 0, 0, 0.1);
+  --light-color-opacity-5: rgba(0, 0, 0, 0.5);
+  --light-color-opacity-6: rgba(0, 0, 0, 0.6);
+  
+  --dark-color-opacity-2: rgba(0, 0, 0, 0.1);
+  --dark-color-opacity-5: rgba(3, 1, 1, 0.2);
+
+}

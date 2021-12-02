@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <script>
+    $(document).on("pagecreate","#page1",function(){
+      $("p").on("tap",function(){
+        $(this).hide();
+      });
+    });
+  </script> -->
+  <!-- <div data-role="page" id="page1">
+    <div data-role="header">
+      <h2>Header</h2>
+    </div>
+
+    <div data-role="main" class="ui-content">
+      <p>This line will disappear, if you tap on it.</p>
+    </div>
+
+    <div data-role="footer">
+      <h2>Footer</h2>
+    </div>
+  </div> -->
+
+
+
+  <button class="texto">texto 1</button>
+
+  <script src="./script/components/jquery-3.6.0.js"></script>
+  <script>
+    $( document ).ready(function() {
+      var savedText = localStorage.getItem('click');
+
+      if(savedText) {
+        $('.texto').text(savedText);
+      }
+    });
+
+    $('.texto').click(function(){
+        var $this = $(this);
+        $this.toggleClass('texto');
+        if($this.hasClass('texto')){
+            $this.text('texto 1');
+        } else {
+            $this.text('texto 2');
+        }
+        localStorage.setItem('click', $this.text());
+    });
+  </script>
+</body>
+</html>

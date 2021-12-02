@@ -1,0 +1,7 @@
+@import url(Poppins.css);
+@import url(SourceCodePro.css);
+
+:root {
+  --font-family-1: 'Poppins', sans-serif;
+  --font-family-2: 'Source Code Pro', monospace;
+}
